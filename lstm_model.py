@@ -107,14 +107,10 @@ class Lstm:
             plt.show()
 
 if __name__ == "__main__":
-
+    # stock predict
     model = Lstm(INPUT_SIZE, OUTPUT_SIZE, TIME_STEP, HIDDEN_UNIT, lr)
     train_x, train_y, test_x, test_y = get_datasets(BATCH_SIZE, TIME_STEP, INPUT_SIZE)
 
     model.train_model(train_x, train_y)
     model.predict_model(test_x, test_y)
 
-    
-
-    
-    
