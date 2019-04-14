@@ -46,6 +46,7 @@ class Lstm:
 
         # define the lstm cell and initialize the units of the lstm model.
         lstm_cell = tf.nn.rnn_cell.LSTMCell(self.hidden_unit)
+        # lstm_cell = tf.nn.rnn_cell.BasicRNNCell(self.hidden_unit)
         init_state = lstm_cell.zero_state(tf_batch_size, dtype = tf.float32)
         lstm_output, final_state = tf.nn.dynamic_rnn(
             cell = lstm_cell, 
